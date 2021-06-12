@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Black Han Sans', sans-serif;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.918);
+}
+
+.container {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: auto 100%;
+    background-image: url(img/agents-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position:  relative; 
+    transition:  1.5s ease-in-out 1.5s;
+
+}
+
+img {
+    width: 40px;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 15px;  
+}
+
+.panel h3 {
+    align-items: center;
+    font-size: 50px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+.panel.active {
+    flex: 5;
+}
+.panel img {
+    transition:  1s ease-in-out .4s;
+}
+.panel h3 {
+    transition: 1s ease-in-out .4s;
+}
+.panel.active img {
+    width: 350px;
+    height: 70%;
+    transition:  .4s ease-in-out .4s;
+    margin-left: 20px;
+    margin-bottom: 200px;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.4s ease-in .4s;
+}
+
+@media(max-width: 720px){
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5),
+    .panel:nth-of-type(6),
+    .panel:nth-of-type(7),
+    .panel:nth-of-type(8),
+    .panel:nth-of-type(9) {
+        display: none;
+    } 
+}
